@@ -1,0 +1,7 @@
+Metric,Key,Value
+TopDayRevenue,2025-01-02,9.5
+TopDayRevenue,2025-01-03,9.0
+TopDayRevenue,2025-01-01,5.0
+AvgRevenuePerProduct,Orange,9.0
+AvgRevenuePerProduct,Apple,6.25
+AvgRevenuePerProduct,Banana,3.5
