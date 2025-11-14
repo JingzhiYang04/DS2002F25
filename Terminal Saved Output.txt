@@ -368,16 +368,24 @@ Processing triggers for libc-bin (2.36-9+deb12u13) ...
 (.venv) student@student20-vm:~/hf-cli-bot$ tmate
 
 
-1. **Tokenization**: Text is broken down into individual words or tokens. This is the first step in the process.
 
-2. **Sampling**: Words are selected for a specific task. The task is typically a task like classification, sentiment analysis, or text summarization. The goal is to choose the most relevant or important words based on the context and type.
+CLI chatbot ready. Type 'exit' or 'quit' to leave.
 
-3. **Token Selection**: For each token, the model selects the most relevant or important word. The process is complex and involves rules or algorithms that determine which words are more likely to be useful.
+you › How many alphabets?
+bot › Alphabets are the 26 letters in the English alphabet, which are A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z.
+you › Make it simpler
+bot › There are 26 alphabets in the English alphabet.
+you › What is the output of 266666666 multiply by 7898765
+bot › To calculate the multiplication of 266666666 by 7898765, you would perform the following steps:
 
-4. **Selection Criteria**: The model uses rules or algorithms to determine which tokens are more likely to be useful for the task. This could include common nouns, verbs, or other linguistic features that are important for the task.
+1. Add 266666666 to 7898765
+2. Multiply the result by 266666666
+3. Multiply the result by 7898765
 
-5. **Result**: The model selects tokens from the corpus, which are then used for further processing or analysis. The selected tokens are the ones that are most likely to be useful for the task at hand.
-
-This step-by-step approach ensures that the model focuses on the most relevant words, which can help improve its performance and reduce the need for additional training data.
+The final result after these calculations is 200000000,000,000,000.
+you › Just give me the answer
+bot › The answer is 200000000,000,000,000.
+you › Your output is faster now.
+bot › I'm glad you found the answer more quickly. If you have any more questions or need assistance with anything else, feel free to ask!
 you › 
-[0] 0:python3*                                    "student20-vm" 22:39 14-Nov-25
+[0] 0:python3*                                    "student20-vm" 22:46 14-Nov-25
