@@ -1,0 +1,383 @@
+Last login: Fri Nov 14 09:06:01 on console
+connieeee@kkao ~ % ssh -i ~/.ssh/ds2002/ds2002_shared_student_key student@35.199.18.44
+
+Linux student20-vm 6.1.0-40-cloud-amd64 #1 SMP PREEMPT_DYNAMIC Debian 6.1.153-1 (2025-09-20) x86_64
+
+The programs included with the Debian GNU/Linux system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Fri Nov  7 23:05:27 2025 from 199.111.224.14
+student@student20-vm:~$ sudo apt update && sudo apt -y upgrade
+sudo apt -y install python3-venv python3-pip git
+Get:1 file:/etc/apt/mirrors/debian.list Mirrorlist [30 B]
+Get:2 file:/etc/apt/mirrors/debian-security.list Mirrorlist [39 B]             
+Hit:7 https://packages.cloud.google.com/apt google-compute-engine-bookworm-stable InRelease
+Hit:3 https://deb.debian.org/debian bookworm InRelease       
+Get:4 https://deb.debian.org/debian bookworm-updates InRelease [55.4 kB]
+Get:5 https://deb.debian.org/debian bookworm-backports InRelease [59.4 kB]
+Get:6 https://deb.debian.org/debian-security bookworm-security InRelease [48.0 kB]
+Hit:8 https://packages.cloud.google.com/apt cloud-sdk-bookworm InRelease
+Fetched 163 kB in 1s (224 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+4 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Calculating upgrade... Done
+The following packages will be upgraded:
+  google-cloud-cli google-cloud-cli-anthoscli google-guest-agent
+  google-osconfig-agent
+4 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 237 MB of archives.
+After this operation, 45.4 MB of additional disk space will be used.
+Get:1 https://packages.cloud.google.com/apt cloud-sdk-bookworm/main amd64 google-cloud-cli-anthoscli amd64 547.0.0-0 [37.7 MB]
+Get:2 https://packages.cloud.google.com/apt cloud-sdk-bookworm/main amd64 google-cloud-cli amd64 547.0.0-0 [142 MB]
+Get:3 https://packages.cloud.google.com/apt google-compute-engine-bookworm-stable/main amd64 google-guest-agent amd64 1:20251107.01-g1 [47.4 MB]
+Get:4 https://packages.cloud.google.com/apt google-compute-engine-bookworm-stable/main amd64 google-osconfig-agent amd64 1:20251028.00-g1 [10.4 MB]
+Fetched 237 MB in 4s (57.1 MB/s)                
+apt-listchanges: Reading changelogs...
+(Reading database ... 84714 files and directories currently installed.)
+Preparing to unpack .../google-cloud-cli-anthoscli_547.0.0-0_amd64.deb ...
+Unpacking google-cloud-cli-anthoscli (547.0.0-0) over (543.0.0-0) ...
+Preparing to unpack .../google-cloud-cli_547.0.0-0_amd64.deb ...
+Unpacking google-cloud-cli (547.0.0-0) over (543.0.0-0) ...
+Preparing to unpack .../google-guest-agent_1%3a20251107.01-g1_amd64.deb ...
+Unpacking google-guest-agent (1:20251107.01-g1) over (1:20250930.01-g1) ...
+Preparing to unpack .../google-osconfig-agent_1%3a20251028.00-g1_amd64.deb ...
+Unpacking google-osconfig-agent (1:20251028.00-g1) over (1:20250924.00-g1) ...
+Setting up google-osconfig-agent (1:20251028.00-g1) ...
+Setting up google-guest-agent (1:20251107.01-g1) ...
+grep: /etc/google-guest-agent/core-plugin-enabled: No such file or directory
+Setting up google-cloud-cli (547.0.0-0) ...
+Setting up google-cloud-cli-anthoscli (547.0.0-0) ...
+Processing triggers for man-db (2.11.2-2) ...
+Processing triggers for libc-bin (2.36-9+deb12u13) ...
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+python3-pip is already the newest version (23.0.1+dfsg-1).
+The following additional packages will be installed:
+  git-man liberror-perl
+Suggested packages:
+  git-daemon-run | git-daemon-sysvinit git-doc git-email git-gui gitk gitweb
+  git-cvs git-mediawiki git-svn
+The following NEW packages will be installed:
+  git git-man liberror-perl python3-venv
+0 upgraded, 4 newly installed, 0 to remove and 0 not upgraded.
+Need to get 9343 kB of archives.
+After this operation, 48.2 MB of additional disk space will be used.
+Get:1 file:/etc/apt/mirrors/debian.list Mirrorlist [30 B]
+Get:2 https://deb.debian.org/debian bookworm/main amd64 liberror-perl all 0.17029-2 [29.0 kB]
+Get:3 https://deb.debian.org/debian bookworm/main amd64 git-man all 1:2.39.5-0+deb12u2 [2053 kB]
+Get:4 https://deb.debian.org/debian bookworm/main amd64 git amd64 1:2.39.5-0+deb12u2 [7260 kB]
+Get:5 https://deb.debian.org/debian bookworm/main amd64 python3-venv amd64 3.11.2-1+b1 [1200 B]
+Fetched 9343 kB in 0s (53.2 MB/s)
+Selecting previously unselected package liberror-perl.
+(Reading database ... 85320 files and directories currently installed.)
+Preparing to unpack .../liberror-perl_0.17029-2_all.deb ...
+Unpacking liberror-perl (0.17029-2) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../git-man_1%3a2.39.5-0+deb12u2_all.deb ...
+Unpacking git-man (1:2.39.5-0+deb12u2) ...
+Selecting previously unselected package git.
+Preparing to unpack .../git_1%3a2.39.5-0+deb12u2_amd64.deb ...
+Unpacking git (1:2.39.5-0+deb12u2) ...
+Selecting previously unselected package python3-venv.
+Preparing to unpack .../python3-venv_3.11.2-1+b1_amd64.deb ...
+Unpacking python3-venv (3.11.2-1+b1) ...
+Setting up liberror-perl (0.17029-2) ...
+Setting up python3-venv (3.11.2-1+b1) ...
+Setting up git-man (1:2.39.5-0+deb12u2) ...
+Setting up git (1:2.39.5-0+deb12u2) ...
+Processing triggers for man-db (2.11.2-2) ...
+student@student20-vm:~$ mkdir -p ~/hf-cli-bot && cd ~/hf-cli-bot
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip wheel
+Requirement already satisfied: pip in ./.venv/lib/python3.11/site-packages (23.0.1)
+Collecting pip
+  Downloading pip-25.3-py3-none-any.whl (1.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 27.9 MB/s eta 0:00:00
+Collecting wheel
+  Downloading wheel-0.45.1-py3-none-any.whl (72 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 72.5/72.5 kB 11.6 MB/s eta 0:00:00
+Installing collected packages: wheel, pip
+  Attempting uninstall: pip
+    Found existing installation: pip 23.0.1
+    Uninstalling pip-23.0.1:
+      Successfully uninstalled pip-23.0.1
+Successfully installed pip-25.3 wheel-0.45.1
+(.venv) student@student20-vm:~/hf-cli-bot$ cd ~/hf-cli-bot
+source .venv/bin/activate
+(.venv) student@student20-vm:~/hf-cli-bot$ sudo apt update
+sudo apt install -y build-essential cmake ninja-build libopenblas-dev
+Get:1 file:/etc/apt/mirrors/debian.list Mirrorlist [30 B]
+Get:2 file:/etc/apt/mirrors/debian-security.list Mirrorlist [39 B]
+Hit:3 https://deb.debian.org/debian bookworm InRelease       
+Hit:7 https://packages.cloud.google.com/apt google-compute-engine-bookworm-stable InRelease
+Hit:4 https://deb.debian.org/debian bookworm-updates InRelease
+Hit:5 https://deb.debian.org/debian bookworm-backports InRelease
+Hit:6 https://deb.debian.org/debian-security bookworm-security InRelease
+Hit:8 https://packages.cloud.google.com/apt cloud-sdk-bookworm InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+build-essential is already the newest version (12.9).
+build-essential set to manually installed.
+The following additional packages will be installed:
+  cmake-data libarchive13 libgfortran5 libjsoncpp25 libopenblas-pthread-dev
+  libopenblas0 libopenblas0-pthread librhash0
+Suggested packages:
+  cmake-doc cmake-format elpa-cmake-mode lrzip
+The following NEW packages will be installed:
+  cmake cmake-data libarchive13 libgfortran5 libjsoncpp25 libopenblas-dev
+  libopenblas-pthread-dev libopenblas0 libopenblas0-pthread librhash0
+  ninja-build
+0 upgraded, 11 newly installed, 0 to remove and 0 not upgraded.
+Need to get 24.0 MB of archives.
+After this operation, 148 MB of additional disk space will be used.
+Get:1 file:/etc/apt/mirrors/debian.list Mirrorlist [30 B]
+Get:2 https://deb.debian.org/debian bookworm/main amd64 libarchive13 amd64 3.6.2-1+deb12u3 [343 kB]
+Get:3 https://deb.debian.org/debian bookworm/main amd64 libjsoncpp25 amd64 1.9.5-4 [78.6 kB]
+Get:4 https://deb.debian.org/debian bookworm/main amd64 librhash0 amd64 1.4.3-3 [134 kB]
+Get:5 https://deb.debian.org/debian bookworm/main amd64 cmake-data all 3.25.1-1 [2026 kB]
+Get:6 https://deb.debian.org/debian bookworm/main amd64 cmake amd64 3.25.1-1 [8692 kB]
+Get:7 https://deb.debian.org/debian bookworm/main amd64 libgfortran5 amd64 12.2.0-14+deb12u1 [793 kB]
+Get:8 https://deb.debian.org/debian bookworm/main amd64 libopenblas0-pthread amd64 0.3.21+ds-4 [6709 kB]
+Get:9 https://deb.debian.org/debian bookworm/main amd64 libopenblas0 amd64 0.3.21+ds-4 [32.6 kB]
+Get:10 https://deb.debian.org/debian bookworm/main amd64 libopenblas-pthread-dev amd64 0.3.21+ds-4 [4971 kB]
+Get:11 https://deb.debian.org/debian bookworm/main amd64 libopenblas-dev amd64 0.3.21+ds-4 [44.9 kB]
+Get:12 https://deb.debian.org/debian bookworm/main amd64 ninja-build amd64 1.11.1-2~deb12u1 [135 kB]
+Fetched 24.0 MB in 0s (76.6 MB/s)      
+Selecting previously unselected package libarchive13:amd64.
+(Reading database ... 86429 files and directories currently installed.)
+Preparing to unpack .../00-libarchive13_3.6.2-1+deb12u3_amd64.deb ...
+Unpacking libarchive13:amd64 (3.6.2-1+deb12u3) ...
+Selecting previously unselected package libjsoncpp25:amd64.
+Preparing to unpack .../01-libjsoncpp25_1.9.5-4_amd64.deb ...
+Unpacking libjsoncpp25:amd64 (1.9.5-4) ...
+Selecting previously unselected package librhash0:amd64.
+Preparing to unpack .../02-librhash0_1.4.3-3_amd64.deb ...
+Unpacking librhash0:amd64 (1.4.3-3) ...
+Selecting previously unselected package cmake-data.
+Preparing to unpack .../03-cmake-data_3.25.1-1_all.deb ...
+Unpacking cmake-data (3.25.1-1) ...
+Selecting previously unselected package cmake.
+Preparing to unpack .../04-cmake_3.25.1-1_amd64.deb ...
+Unpacking cmake (3.25.1-1) ...
+Selecting previously unselected package libgfortran5:amd64.
+Preparing to unpack .../05-libgfortran5_12.2.0-14+deb12u1_amd64.deb ...
+Unpacking libgfortran5:amd64 (12.2.0-14+deb12u1) ...
+Selecting previously unselected package libopenblas0-pthread:amd64.
+Preparing to unpack .../06-libopenblas0-pthread_0.3.21+ds-4_amd64.deb ...
+Unpacking libopenblas0-pthread:amd64 (0.3.21+ds-4) ...
+Selecting previously unselected package libopenblas0:amd64.
+Preparing to unpack .../07-libopenblas0_0.3.21+ds-4_amd64.deb ...
+Unpacking libopenblas0:amd64 (0.3.21+ds-4) ...
+Selecting previously unselected package libopenblas-pthread-dev:amd64.
+Preparing to unpack .../08-libopenblas-pthread-dev_0.3.21+ds-4_amd64.deb ...
+Unpacking libopenblas-pthread-dev:amd64 (0.3.21+ds-4) ...
+Selecting previously unselected package libopenblas-dev:amd64.
+Preparing to unpack .../09-libopenblas-dev_0.3.21+ds-4_amd64.deb ...
+Unpacking libopenblas-dev:amd64 (0.3.21+ds-4) ...
+Selecting previously unselected package ninja-build.
+Preparing to unpack .../10-ninja-build_1.11.1-2~deb12u1_amd64.deb ...
+Unpacking ninja-build (1.11.1-2~deb12u1) ...
+Setting up libarchive13:amd64 (3.6.2-1+deb12u3) ...
+Setting up ninja-build (1.11.1-2~deb12u1) ...
+Setting up libjsoncpp25:amd64 (1.9.5-4) ...
+Setting up libgfortran5:amd64 (12.2.0-14+deb12u1) ...
+Setting up librhash0:amd64 (1.4.3-3) ...
+Setting up cmake-data (3.25.1-1) ...
+Setting up libopenblas0-pthread:amd64 (0.3.21+ds-4) ...
+update-alternatives: using /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 to provide /usr/lib/x86_64-linux-gnu/libblas.so.3 (libblas.so.3-x86_64-linux-gnu) in auto mode
+update-alternatives: using /usr/lib/x86_64-linux-gnu/openblas-pthread/liblapack.so.3 to provide /usr/lib/x86_64-linux-gnu/liblapack.so.3 (liblapack.so.3-x86_64-linux-gnu) in auto mode
+update-alternatives: using /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblas.so.0 to provide /usr/lib/x86_64-linux-gnu/libopenblas.so.0 (libopenblas.so.0-x86_64-linux-gnu) in auto mode
+Setting up libopenblas0:amd64 (0.3.21+ds-4) ...
+Setting up cmake (3.25.1-1) ...
+Setting up libopenblas-pthread-dev:amd64 (0.3.21+ds-4) ...
+update-alternatives: using /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so to provide /usr/lib/x86_64-linux-gnu/libblas.so (libblas.so-x86_64-linux-gnu) in auto mode
+update-alternatives: using /usr/lib/x86_64-linux-gnu/openblas-pthread/liblapack.so to provide /usr/lib/x86_64-linux-gnu/liblapack.so (liblapack.so-x86_64-linux-gnu) in auto mode
+update-alternatives: using /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblas.so to provide /usr/lib/x86_64-linux-gnu/libopenblas.so (libopenblas.so-x86_64-linux-gnu) in auto mode
+Setting up libopenblas-dev:amd64 (0.3.21+ds-4) ...
+Processing triggers for man-db (2.11.2-2) ...
+Processing triggers for libc-bin (2.36-9+deb12u13) ...
+(.venv) student@student20-vm:~/hf-cli-bot$ CMAKE_ARGS="-DLLAMA_BLAS=ON -DLLAMA_BLAS_VENDOR=OpenBLAS" \
+  pip install llama-cpp-python
+Collecting llama-cpp-python
+  Downloading llama_cpp_python-0.3.16.tar.gz (50.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.7/50.7 MB 70.8 MB/s  0:00:00
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting typing-extensions>=4.5.0 (from llama-cpp-python)
+  Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting numpy>=1.20.0 (from llama-cpp-python)
+  Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+Collecting diskcache>=5.6.1 (from llama-cpp-python)
+  Downloading diskcache-5.6.3-py3-none-any.whl.metadata (20 kB)
+Collecting jinja2>=2.11.3 (from llama-cpp-python)
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting MarkupSafe>=2.0 (from jinja2>=2.11.3->llama-cpp-python)
+  Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Downloading diskcache-5.6.3-py3-none-any.whl (45 kB)
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+Downloading numpy-2.3.4-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 177.6 MB/s  0:00:00
+Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB)
+Building wheels for collected packages: llama-cpp-python
+  Building wheel for llama-cpp-python (pyproject.toml) ... done
+  Created wheel for llama-cpp-python: filename=llama_cpp_python-0.3.16-cp311-cp311-linux_x86_64.whl size=4431049 sha256=0e222e7e5aa63c2686cfe073e6984e5c7eb7d690b3ee88d790a3b1b30c21f37a
+  Stored in directory: /home/student/.cache/pip/wheels/d8/5b/e5/a7d4b5765da347d314e8155197440c9995a962f8e4a5f52b23
+Successfully built llama-cpp-python
+Installing collected packages: typing-extensions, numpy, MarkupSafe, diskcache, jinja2, llama-cpp-python
+Successfully installed MarkupSafe-3.0.3 diskcache-5.6.3 jinja2-3.1.6 llama-cpp-python-0.3.16 numpy-2.3.4 typing-extensions-4.15.0
+(.venv) student@student20-vm:~/hf-cli-bot$ mkdir -p models/qwen2.5-0.5b && cd models/qwen2.5-0.5b
+wget https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF/resolve/main/qwen2.5-0.5b-instruct-q4_k_m.gguf \
+  -O qwen2.5b-q4_k_m.gguf
+cd ../../
+--2025-11-14 22:21:21--  https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF/resolve/main/qwen2.5-0.5b-instruct-q4_k_m.gguf
+Resolving huggingface.co (huggingface.co)... 3.168.73.111, 3.168.73.38, 3.168.73.129, ...
+Connecting to huggingface.co (huggingface.co)|3.168.73.111|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://cas-bridge.xethub.hf.co/xet-bridge-us/66e98ad5d89bf05ecbbdfe9e/0663b826e09042345d6e2069d9655cd3ae84812d8f39a5894bed7b24fc0e86cc?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cas%2F20251114%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251114T222121Z&X-Amz-Expires=3600&X-Amz-Signature=fc38a6a9851f5739fe4f04f34c708a2a3a69e4d5bfe6fa5a87df9ed831505e74&X-Amz-SignedHeaders=host&X-Xet-Cas-Uid=public&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27qwen2.5-0.5b-instruct-q4_k_m.gguf%3B+filename%3D%22qwen2.5-0.5b-instruct-q4_k_m.gguf%22%3B&x-id=GetObject&Expires=1763162481&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc2MzE2MjQ4MX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2FzLWJyaWRnZS54ZXRodWIuaGYuY28veGV0LWJyaWRnZS11cy82NmU5OGFkNWQ4OWJmMDVlY2JiZGZlOWUvMDY2M2I4MjZlMDkwNDIzNDVkNmUyMDY5ZDk2NTVjZDNhZTg0ODEyZDhmMzlhNTg5NGJlZDdiMjRmYzBlODZjYyoifV19&Signature=UVmfhmpE0yAwAmS-F8JFN4rz67jCh7Sq51V%7ETH3a5lPnoo%7Em0mkOnOIgX%7EqnPGtDYP4ZRcnNVelbM2TwgRD0qRiYcwWkwNo0a4bhAFAabfY94-jK27FVAVC0DOWKQRfRmSYuYAxCnaJPaiAi36HWbA9%7E7DcdTwwA5c9J%7EUwRKaMcc%7ElgtNnwkXAAuFGpEytvpkAssRhJY9F%7EdBAptsDgPvOMcyk2NEF-dpXnYRTtPsNcW-HLv8Q6L3Ii1mSAlYuhQjwjJzWg47PEUFNCSlp0-8qnyrat0drr-ih1L8HeDkiMJ253dQEjQ2uXfuOXOyPxVj2YgznzoXfqh5xWhdA6tg__&Key-Pair-Id=K2L8F4GPSG1IFC [following]
+--2025-11-14 22:21:21--  https://cas-bridge.xethub.hf.co/xet-bridge-us/66e98ad5d89bf05ecbbdfe9e/0663b826e09042345d6e2069d9655cd3ae84812d8f39a5894bed7b24fc0e86cc?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cas%2F20251114%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20251114T222121Z&X-Amz-Expires=3600&X-Amz-Signature=fc38a6a9851f5739fe4f04f34c708a2a3a69e4d5bfe6fa5a87df9ed831505e74&X-Amz-SignedHeaders=host&X-Xet-Cas-Uid=public&response-content-disposition=inline%3B+filename*%3DUTF-8%27%27qwen2.5-0.5b-instruct-q4_k_m.gguf%3B+filename%3D%22qwen2.5-0.5b-instruct-q4_k_m.gguf%22%3B&x-id=GetObject&Expires=1763162481&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTc2MzE2MjQ4MX19LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2FzLWJyaWRnZS54ZXRodWIuaGYuY28veGV0LWJyaWRnZS11cy82NmU5OGFkNWQ4OWJmMDVlY2JiZGZlOWUvMDY2M2I4MjZlMDkwNDIzNDVkNmUyMDY5ZDk2NTVjZDNhZTg0ODEyZDhmMzlhNTg5NGJlZDdiMjRmYzBlODZjYyoifV19&Signature=UVmfhmpE0yAwAmS-F8JFN4rz67jCh7Sq51V%7ETH3a5lPnoo%7Em0mkOnOIgX%7EqnPGtDYP4ZRcnNVelbM2TwgRD0qRiYcwWkwNo0a4bhAFAabfY94-jK27FVAVC0DOWKQRfRmSYuYAxCnaJPaiAi36HWbA9%7E7DcdTwwA5c9J%7EUwRKaMcc%7ElgtNnwkXAAuFGpEytvpkAssRhJY9F%7EdBAptsDgPvOMcyk2NEF-dpXnYRTtPsNcW-HLv8Q6L3Ii1mSAlYuhQjwjJzWg47PEUFNCSlp0-8qnyrat0drr-ih1L8HeDkiMJ253dQEjQ2uXfuOXOyPxVj2YgznzoXfqh5xWhdA6tg__&Key-Pair-Id=K2L8F4GPSG1IFC
+Resolving cas-bridge.xethub.hf.co (cas-bridge.xethub.hf.co)... 13.33.67.84, 13.33.67.95, 13.33.67.21, ...
+Connecting to cas-bridge.xethub.hf.co (cas-bridge.xethub.hf.co)|13.33.67.84|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 491400032 (469M)
+Saving to: ‘qwen2.5b-q4_k_m.gguf’
+
+qwen2.5b-q4_k_m.ggu 100%[===================>] 468.63M   300MB/s    in 1.6s    
+
+2025-11-14 22:21:23 (300 MB/s) - ‘qwen2.5b-q4_k_m.gguf’ saved [491400032/491400032]
+
+(.venv) student@student20-vm:~/hf-cli-bot$ cd ~/hf-cli-bot
+nano cli_chatbot.py
+(.venv) student@student20-vm:~/hf-cli-bot$ chmod +x cli_chatbot.py
+(.venv) student@student20-vm:~/hf-cli-bot$ cd ~/hf-cli-bot
+source .venv/bin/activate
+./cli_chatbot.py
+Loading model: models/qwen2.5-0.5b/qwen2.5b-q4_k_m.gguf …
+llama_context: n_ctx_per_seq (4096) < n_ctx_train (32768) -- the full capacity of the model will not be utilized
+
+CLI chatbot ready. Type 'exit' or 'quit' to leave.
+
+you › Explain how token sampling works in plain English.
+bot › Token sampling, also known as tokenization, is a technique used in natural language processing (NLP) to break down text into individual tokens or units. Here's a step-by-step explanation:
+
+1. **Input Text**: The input text is the original text you want to analyze.
+
+2. **Identify Text Units**: The text is divided into separate units (tokens). Common units include words, sentences, phrases, or other language structures.
+
+3. **Tokenize the Text**: Each unit is assigned a unique token. The token is a distinct identifier that distinguishes between the units.
+
+4. **Tokenize the Text Again**: The tokenized text is again broken down into separate units (tokens).
+
+5. **Process the Tokenized Text**: Each token (or unit) is processed using various NLP techniques, including tokenization, stemming, stopword removal, and other natural language processing steps.
+
+6. **Output the Tokenized Text**: The final output is the tokenized text, which contains the units or tokens of the original text.
+
+Token sampling works by breaking down text into discrete units (tokens) and then processing these units using NLP techniques. The process is repeated until there is no more meaningful unit left in the text. This technique is commonly used in sentiment analysis, where the text is divided into sentences, and each sentence is analyzed individually to identify the overall sentiment.
+you › Explain your reasoning step by step,but keep answers under 8 sentences unless the user asks for more detail.
+bot › Certainly, I'll explain the reasoning step by step for token sampling.
+
+1. **Input Text**: The input text is the original text you want to analyze.
+
+2. **Identify Text Units**: The text is divided into separate units (tokens). Common units include words, sentences, phrases, or other language structures.
+
+3. **Tokenize the Text**: Each unit is assigned a unique token. The token is a distinct identifier that distinguishes between the units.
+
+4. **Tokenize the Text Again**: The tokenized text is again broken down into separate units (tokens).
+
+5. **Process the Tokenized Text**: Each token (or unit) is processed using various NLP techniques, including tokenization, stemming, stopword removal, and other natural language processing steps.
+
+6. **Output the Tokenized Text**: The final output is the tokenized text, which contains the units or tokens of the original text.
+
+Token sampling works by breaking down text into discrete units (tokens) and then processing these units using NLP techniques. The process is repeated until there is no more meaningful unit left in the text. This technique is commonly used in sentiment analysis, where the text is divided into sentences, and each sentence is analyzed individually to identify the overall sentiment.
+you › sudo apt install tmate
+bot › To install `tmate` on a Debian-based system, you can use the following command:
+
+```
+sudo apt install tmate
+```
+
+This command will install the `tmate` package, which is a terminal manager for the Linux terminal, allowing you to open a terminal with a graphical interface.
+you › tmate
+bot › `tmate` is a terminal manager for the Linux terminal, providing a graphical interface to open a terminal with a graphical interface
+.
+you › bot › I'm sorry, I didn't understand. Could you please provide more details?
+you › ^X
+bot › I see. I'm here to help, but I'm not sure what you're trying to ask. Could you please provide more context or a question?
+you › exit
+bye! 👋
+(.venv) student@student20-vm:~/hf-cli-bot$ sudo apt update
+sudo apt install -y tmate
+Get:1 file:/etc/apt/mirrors/debian.list Mirrorlist [30 B]
+Get:2 file:/etc/apt/mirrors/debian-security.list Mirrorlist [39 B]             
+Hit:7 https://packages.cloud.google.com/apt google-compute-engine-bookworm-stable InRelease
+Hit:3 https://deb.debian.org/debian bookworm InRelease      
+Hit:4 https://deb.debian.org/debian bookworm-updates InRelease
+Hit:5 https://deb.debian.org/debian bookworm-backports InRelease
+Hit:6 https://deb.debian.org/debian-security bookworm-security InRelease
+Hit:8 https://packages.cloud.google.com/apt cloud-sdk-bookworm InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+All packages are up to date.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  libmsgpackc2 libssh-4
+The following NEW packages will be installed:
+  libmsgpackc2 libssh-4 tmate
+0 upgraded, 3 newly installed, 0 to remove and 0 not upgraded.
+Need to get 495 kB of archives.
+After this operation, 1328 kB of additional disk space will be used.
+Get:1 file:/etc/apt/mirrors/debian.list Mirrorlist [30 B]
+Get:2 https://deb.debian.org/debian bookworm/main amd64 libmsgpackc2 amd64 4.0.0-3 [20.9 kB]
+Get:3 https://deb.debian.org/debian bookworm/main amd64 libssh-4 amd64 0.10.6-0+deb12u1 [189 kB]
+Get:4 https://deb.debian.org/debian bookworm/main amd64 tmate amd64 2.4.0-2 [285 kB]
+Fetched 495 kB in 0s (3164 kB/s)
+Selecting previously unselected package libmsgpackc2:amd64.
+(Reading database ... 89749 files and directories currently installed.)
+Preparing to unpack .../libmsgpackc2_4.0.0-3_amd64.deb ...
+Unpacking libmsgpackc2:amd64 (4.0.0-3) ...
+Selecting previously unselected package libssh-4:amd64.
+Preparing to unpack .../libssh-4_0.10.6-0+deb12u1_amd64.deb ...
+Unpacking libssh-4:amd64 (0.10.6-0+deb12u1) ...
+Selecting previously unselected package tmate.
+Preparing to unpack .../tmate_2.4.0-2_amd64.deb ...
+Unpacking tmate (2.4.0-2) ...
+Setting up libmsgpackc2:amd64 (4.0.0-3) ...
+Setting up libssh-4:amd64 (0.10.6-0+deb12u1) ...
+Setting up tmate (2.4.0-2) ...
+Processing triggers for man-db (2.11.2-2) ...
+Processing triggers for libc-bin (2.36-9+deb12u13) ...
+(.venv) student@student20-vm:~/hf-cli-bot$ tmate
+
+
+1. **Tokenization**: Text is broken down into individual words or tokens. This is the first step in the process.
+
+2. **Sampling**: Words are selected for a specific task. The task is typically a task like classification, sentiment analysis, or text summarization. The goal is to choose the most relevant or important words based on the context and type.
+
+3. **Token Selection**: For each token, the model selects the most relevant or important word. The process is complex and involves rules or algorithms that determine which words are more likely to be useful.
+
+4. **Selection Criteria**: The model uses rules or algorithms to determine which tokens are more likely to be useful for the task. This could include common nouns, verbs, or other linguistic features that are important for the task.
+
+5. **Result**: The model selects tokens from the corpus, which are then used for further processing or analysis. The selected tokens are the ones that are most likely to be useful for the task at hand.
+
+This step-by-step approach ensures that the model focuses on the most relevant words, which can help improve its performance and reduce the need for additional training data.
+you › 
+[0] 0:python3*                                    "student20-vm" 22:39 14-Nov-25
